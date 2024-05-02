@@ -34,12 +34,25 @@ const collectEmployees = function() {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+  const totalSalary = employeesArray.reduce((acc, employee) =>
+    acc + parseFloat(employee.salary), 0);
+
+  const averageSalary = totalSalary / employeesArray.length;
+
+  console.log(`The average employee salary between our ${employeesArray.length} employee(s) is`, averageSalary.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD"
+  }));
 }
+
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+
 }
+ 
+
 
 /*
   ====================
